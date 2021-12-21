@@ -3,12 +3,8 @@ const path = require('path');
 
 const app = express();
 
-app.get('', (req,res) =>{
-    res.send("Ahora si entre");  // Permite enviar texto o codigo HTML
-});
-
 // esta funcion marca que en "/mercadoLiebre" vas a poder acceder al html que vos estas usando
-app.get('/mercadoLiebre', (req, res) =>{  
+app.get('', (req, res) =>{  
     res.sendFile(path.resolve(__dirname, './views/home.html'));
 }); 
 app.get('/login', (req, res) =>{  
