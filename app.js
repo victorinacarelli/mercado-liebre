@@ -20,7 +20,7 @@ app.get('/register', (req, res) =>{
 app.use(express.static(path.join(__dirname, './public')));  
 
 //el primer parametro del listen dice en que numero de "localhost:" va a estar
-app.listen(3002, () => {
+app.listen(process.env.PORT || 3002, () => {
     console.log("Servidor corriendo");
 });
 
